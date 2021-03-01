@@ -38,8 +38,6 @@ public with sharing class PatientController {
     @AuraEnabled
     public Integer Reporting_PHU_ID { get; set; }
     @AuraEnabled
-    public Integer _id { get; set; }
-    @AuraEnabled
     public String Reporting_PHU { get; set; }
     @AuraEnabled
     public String Reporting_PHU_Address { get; set; }
