@@ -69,5 +69,4 @@ You have a newly created Lightning Web Component patientList under `src/lwc/pati
 ]
 ```
 
-The apex is already imported for you into the component. Please call the apex in imperative style and display the result data in a data table like this and explain your solution:
-![Solution](result.jpg)
+The apex is already imported for you into the component. Please call the apex in imperative style and display the result data [in a data table like this](https://raw.githubusercontent.com/je-lwc/lwc-patient-list/master/result.jpg) and explain your solution.
