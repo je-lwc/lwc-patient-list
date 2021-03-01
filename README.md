@@ -1,6 +1,63 @@
 # LWC Patient List
 
-You have a newly created Lightning Web Component patientList under `src/lwc/patientList`. An apex method `PatientController.getPatientList` returns COVID patient data in a JSON array. A small subset of sample data looks like the following:
+You have a newly created Lightning Web Component patientList under `src/lwc/patientList`.   
+An apex class was written like this:
+```Apex
+public with sharing class PatientController {
+
+  @AuraEnabled
+  public static List<Patient> getPatientList() {
+    // ...
+  }
+  
+  // ...
+  
+  public with sharing class Patient {
+    @AuraEnabled
+    public Integer _id { get; set; }
+    @AuraEnabled
+    public String Row_ID { get; set; }
+    @AuraEnabled
+    public String Accurate_Episode_Date { get; set; }
+    @AuraEnabled
+    public String Case_Reported_Date { get; set; }
+    @AuraEnabled
+    public String Test_Reported_Date { get; set; }
+    @AuraEnabled
+    public String Specimen_Date { get; set; }
+    @AuraEnabled
+    public String Age_Group { get; set; }
+    @AuraEnabled
+    public String Client_Gender { get; set; }
+    @AuraEnabled
+    public String Case_AcquisitionInfo { get; set; }
+    @AuraEnabled
+    public String Outcome1 { get; set; }
+    @AuraEnabled
+    public String Outbreak_Related { get; set; }
+    @AuraEnabled
+    public Integer Reporting_PHU_ID { get; set; }
+    @AuraEnabled
+    public Integer _id { get; set; }
+    @AuraEnabled
+    public String Reporting_PHU { get; set; }
+    @AuraEnabled
+    public String Reporting_PHU_Address { get; set; }
+    @AuraEnabled
+    public String Reporting_PHU_City { get; set; }
+    @AuraEnabled
+    public String Reporting_PHU_Postal_Code { get; set; }
+    @AuraEnabled
+    public String Reporting_PHU_Website { get; set; }
+    @AuraEnabled
+    public Decimal Reporting_PHU_Latitude { get; set; }
+    @AuraEnabled
+    public Decimal Reporting_PHU_Longitude { get; set; }
+  }
+}
+```
+
+method `getPatientList` returns COVID patient data in a JSON array. A small subset of sample data looks like the following:
 ```JSON
 [
   {
@@ -69,4 +126,5 @@ You have a newly created Lightning Web Component patientList under `src/lwc/pati
 ]
 ```
 
-The apex is already imported for you into the component. Please call the apex in imperative style and display the result data [in a data table like this](https://raw.githubusercontent.com/je-lwc/lwc-patient-list/master/result.jpg) and explain your solution.
+Please implement `patientList` component by calling the apex in imperative style and display the result data [in a data table like this](https://raw.githubusercontent.com/je-lwc/lwc-patient-list/master/result.jpg).   
+Please try to explain your solution as you develop it.
