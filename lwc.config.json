@@ -1,0 +1,14 @@
+{
+  "modules": [
+    {
+      "npm": "lightning-base-components"
+    },
+    {
+      "dir": "src/lwc"
+    },
+    {
+      "name": "@salesforce/apex/PatientController.getPatientList",
+      "path": "src/apex/getPatientList.js"
+    }
+  ]
+}
